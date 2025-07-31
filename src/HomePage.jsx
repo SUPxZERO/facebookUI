@@ -12,7 +12,6 @@ import ben10pic from './assets/ben10pic.png';
 function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Top Navbar */}
       <div className="w-full bg-white shadow-md p-2 flex items-center justify-between">
         {/* Left: Logo and Search */}
         <div className="flex items-center gap-3">
@@ -45,10 +44,6 @@ function HomePage() {
             <div className='hover:bg-gray-200'>
                 <img src={groupicon} className="w-6 h-6 cursor-pointer" />
             </div>
-          
-          
-          
-          
           
         </div>
 
