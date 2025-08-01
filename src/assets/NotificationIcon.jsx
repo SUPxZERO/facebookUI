@@ -1,0 +1,7 @@
+export default function NotificationIcon(){
+    return(
+        <svg className="bg-gray-400 p-2 rounded-full hover:bg-gray-500" xmlns="http://www.w3.org/2000/svg" width={42} height={42} viewBox="0 0 24 24"><path fill="#000" d="M8.645 20.5a3.502 3.502 0 0 0 6.71 0zM3 19.5h18v-3l-2-3v-5a7 7 0 1 0-14 0v5l-2 3z"></path></svg>    
+    )
+
+}
+
