@@ -3,15 +3,9 @@ import { useNavigate, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 
 function App() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/HomePage'); // FIX: route name, not filename
-  };
-
+ 
   return (
-    <Routes>
-      <Route path="/" element={
+   
         <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
       {/* Main Content */}
       <div className="flex justify-center items-center flex-grow">
@@ -41,7 +35,7 @@ function App() {
                   className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
-                  onClick={handleClick}
+                  href="./HomePage"
                   className="bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700"
                 >
                   Log In
@@ -104,9 +98,7 @@ function App() {
         <p className="mt-3">&copy; 2025</p>
       </div>
         </div>
-      } />
-      <Route path="/HomePage" element={<HomePage />} />
-    </Routes>
+  
   );
 }
 

@@ -1,7 +1,7 @@
 
 export default function HomeIcon(){
     return(<>
-        <svg className="hover:fill-blue-500 hover:w-5" alt="Home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="" d="M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75"/></svg>
+        <svg className="hover:fill-blue-500 hover:w-5 fill-gray-600" alt="Home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75"/></svg>
         </>
     )
 }

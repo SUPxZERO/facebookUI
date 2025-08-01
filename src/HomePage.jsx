@@ -1,4 +1,4 @@
-import React from 'react';
+import { useNavigate, Routes, Route } from 'react-router-dom';
 import FacebookIcon from './assets/FacebookIcon.jsx';
 import HomeIcon from './assets/HomeIcon.jsx';
 import SearchIcon from './assets/SearchIcon.jsx';
@@ -54,7 +54,7 @@ function HomePage() {
 
         {/* Right: Profile */}
         <div className='hidden md:flex gap-2'>
-          <div>
+          <div className='bg-gray-600 rounded-full'>
             <MenuIcon />
           </div>
           <div>
