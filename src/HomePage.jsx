@@ -1,7 +1,7 @@
 import React from 'react';
 import facebook from './assets/facebook.png';
 import search from './assets/search.png';
-import home from './assets/home.png';
+import home from './assets/home.jsx';
 import friends from './assets/friends.png';
 import videoicon from './assets/videoicon.png';
 import groupicon from './assets/groupicon.png';
@@ -29,7 +29,7 @@ function HomePage() {
         {/* Middle: Nav Icons */}
         <div className="flex gap-8">
 
-            <div className='hover:bg-gray-200'>
+            <div className=''>
                 <img src={home} className="w-6 h-6 cursor-pointer" />
             </div>
             <div className='hover:bg-gray-200'>
@@ -56,7 +56,7 @@ function HomePage() {
       {/* Main Layout */}
       <div className="flex mt-4 px-6 gap-6">
         {/* Sidebar Left */}
-        <div className="w-1/5 bg-white p-4 rounded-xl shadow-sm h-screen sticky top-0">
+        <div className="w-1/5 bg-white p-4 rounded-xl shadow-sm h-screen sticky top-0 hidden  ">
           <p className="mb-2 font-semibold">Navigation</p>
           <ul className="space-y-2 text-sm">
             <li className="hover:bg-gray-200 hover:underline p-2 rounded">Friends</li>
@@ -108,7 +108,7 @@ function HomePage() {
         </div>
 
         {/* Right Sidebar */}
-        <div className="w-1/4 bg-white p-4 rounded-xl shadow-sm h-fit">
+        <div className="w-1/4 bg-white p-4 rounded-xl shadow-sm h-fit hidden md:block">
           <p className="font-semibold mb-3">Friend Requests</p>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">

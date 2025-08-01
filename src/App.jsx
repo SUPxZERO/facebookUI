@@ -15,12 +15,12 @@ function App() {
         <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
       {/* Main Content */}
       <div className="flex justify-center items-center flex-grow">
-        <div className="flex justify-between items-center w-full max-w-6xl px-6">
+        <div className="flex flex-col md:flex-row md:space-x-4 justify-center gap-4 items-center w-full max-w-6xl px-6">
 
           {/* Left Side - Facebook Text */}
           <div className="flex flex-col space-y-4 max-w-md">
             <h1 className="text-blue-600 text-6xl font-bold">facebook</h1>
-            <p className="text-2xl">
+            <p className="text-2xl hidden md:block">
               Connect with friends and the world <br />
               around you on Facebook.
             </p>
