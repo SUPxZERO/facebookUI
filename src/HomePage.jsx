@@ -1,92 +1,30 @@
-import { useNavigate, Routes, Route } from 'react-router-dom';
-import FacebookIcon from './assets/FacebookIcon.jsx';
-import HomeIcon from './assets/HomeIcon.jsx';
-import SearchIcon from './assets/SearchIcon.jsx';
-import FriendsIcon from './assets/FriendsIcon.jsx';
-import VideoIcon from './assets/VideoIcon.jsx';
-import MarketIcon from './assets/MarketIcon.jsx';
-import GroupIcon from './assets/GroupIcon.jsx';
-import MenuIcon from './assets/MenuIcon.jsx';
-import MessengerIcon from './assets/MessengerIcon.jsx';
-import NotificationIcon from './assets/NotificationIcon.jsx';
+
+import Bar from './Bar.jsx';
 
 
 import ben10pf from './assets/ben10pf.png';
 import ben10pic from './assets/ben10pic.png';
+import { Link } from 'react-router-dom';
 
-function HomePage() {
+export default function HomePage() {
   return (  
-    <div className="min-h-screen bg-gray-100 w-full">
-      <div className="w-full bg-white shadow-md p-2 flex items-center justify-between">
-        {/* Left: Logo and Search */}
-        <div className="flex items-center gap-3">
-          <FacebookIcon />
-          <div className="bg-gray-200 items-center px-3 py-1 rounded-full w-64 gap-1 md:flex hidden">
-            <SearchIcon />
-            <input
-              type="text"
-              placeholder="Search Facebook"
-              className="bg-transparent outline-none w-full text-sm"
-            />
-          </div>
-        </div>
-
-        {/* Middle: Nav Icons */}
-        <div className="flex gap-8">
-
-            <div className=''>
-                <HomeIcon />
-            </div>
-            <div className=''>
-                <FriendsIcon />
-            </div>
-            <div className=''>
-                <VideoIcon />
-            </div>
-            <div className=''>
-                <MarketIcon />
-            </div>
-            <div className=''>
-                <GroupIcon />
-            </div>
-          
-        </div>
-
-        {/* Right: Profile */}
-        <div className='hidden md:flex gap-2'>
-          <div className='bg-gray-600 rounded-full'>
-            <MenuIcon />
-          </div>
-          <div>
-            <MessengerIcon />
-          </div>
-          <div>
-            <NotificationIcon />
-          </div>
-          
-            
-              <div className="w-12 h-12 rounded-full  shadow-sm overflow-hidden relative cursor-pointer hover:scale-105 transition-transform duration-200">
-                <div className="h-full w-full static">
-                  <img src={ben10pic} alt="Me" className="h-full w-full object-cover" />
-                </div>
-              </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gray-100 w-full space-y-0.5">
       
+      <Bar/>
 
       {/* Main Layout */}
       <div className="flex mt-4 px-6 gap-6 justify-center items-center w-full">
         {/* Sidebar Left */}
         <div className="w-1/5 bg-white p-4 rounded-xl shadow-sm h-screen sticky top-0 hidden md:block ">
           <p className="mb-2 font-semibold">Navigation</p>
-          <ul className="space-y-2 text-sm">
-            <li className="hover:bg-gray-200 hover:underline hover:m-4   p-2 rounded">Friends</li>
-            <li className="hover:bg-gray-200 hover:underline hover:m-4 p-2 rounded">Memories</li>
-            <li className="hover:bg-gray-200 hover:underline hover:m-4 p-2 rounded">Groups</li>
-            <li className="hover:bg-gray-200 hover:underline hover:m-4 p-2 rounded">Videos</li>
-            <li className="hover:bg-gray-200 hover:underline hover:m-4 p-2 rounded">Marketplace</li>
-            <li className="hover:bg-gray-200 hover:underline hover:m-4 p-2 rounded">Events</li>
-          </ul>
+          <div className="space-y-2 text-sm flex flex-col">
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Friends</Link>
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Memories</Link>
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Groups</Link>
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Videos</Link>
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Marketplace</Link>
+            <Link to="/FriendsPage" className="hover:bg-gray-200 hover:underline hover:m-4 w-full  p-2 rounded">Events</Link>
+          </div>
         </div>
 
         {/* Center Feed */}
@@ -166,4 +104,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+

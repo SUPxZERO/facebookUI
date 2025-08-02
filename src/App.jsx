@@ -1,9 +1,10 @@
 import './App.css';
-import { useNavigate, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage';
+import { Link } from 'react-router-dom';
 
-function App() {
- 
+
+
+export default function App() {
+ console.log("Hello")
   return (
    
         <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
@@ -34,12 +35,10 @@ function App() {
                   placeholder="Password"
                   className="border rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button
-                  href="./HomePage"
-                  className="bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700"
-                >
-                  Log In
-                </button>
+                <Link to="/HomePage"  className="bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 px-25">
+                
+                  Login
+              </Link>
                 <p className="text-blue-600 text-sm text-center hover:underline cursor-pointer">
                   Forgot password?
                 </p>
@@ -101,5 +100,3 @@ function App() {
   
   );
 }
-
-export default App;
